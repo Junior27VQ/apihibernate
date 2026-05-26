@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.kradev.empleados.entidades.Empleado;
 import com.krakedev.peliculas.entidades.Pelicula;
 import com.krakedev.peliculas.repository.PeliculaRepository;
 
@@ -50,10 +49,10 @@ public class ServicioPelicula {
 		return true;
 	};
 	
-	public List<Pelicula> buscarPorCargo(String genero){
+	public List<Pelicula> buscarPorGenero(String genero){
 		return repository.findByGenero(genero);
 	}
-	public List<Pelicula> buscarPorEstado(boolean disponible){
+	public List<Pelicula> buscarPorDisponible(boolean disponible){
 		return repository.findByDisponible(disponible);
 	}
 
